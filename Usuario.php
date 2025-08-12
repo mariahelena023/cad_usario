@@ -27,7 +27,31 @@ Class Usuario{
         return $res;
     }
 
+    public function deletar($id){
+        try{
+            $db = new Database("user");
+            $res = $db->delete('id = '.$id);
 
+            return $res;
+
+        }catch(\throwable $th){
+            echo "<script>console.log('ERRO Delete: " . $th->getMessage() . "' );</script>";
+        }
+    }
+
+    public function atualizar(){
+       try{
+            $db = new Database('user');
+            $res = $db->update('id = '.$this->id, [
+                'nome'=> $this->nome,
+                'senha'=> $this->senha                
+            ]);
+            return $res;
+
+       }catch(\Throwable $th){
+            echo "<script>console.log('ERRO atualizar: " . $th->getMessage() . "' );</script>";
+       } 
+    }
 
 
 
