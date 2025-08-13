@@ -5,7 +5,7 @@ Class Database {
     private $host = "127.0.0.1";
     private $usuario = "root";
     private $senha = "";
-    private $db = "cad384";
+    private $db = "crud_2025b";
     private $port = "3306";
     private $tabela;
     private $conn;

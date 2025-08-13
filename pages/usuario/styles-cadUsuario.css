@@ -1,0 +1,124 @@
+
+:root{
+  --bg1:#e6f2ff;
+  --bg2:#cfe8ff;
+  --card:#ffffff;
+  --primary:#2b6cb0;
+  --primary-600:#2c5282;
+  --primary-700:#1e3a5f;
+  --text:#0f172a;
+  --muted:#64748b;
+  --ring:#93c5fd;
+  --shadow: 0 20px 40px rgba(15,23,42,0.08);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 70% -10%, var(--bg2), transparent 60%),
+              radial-gradient(1200px 800px at -10% 110%, var(--bg2), transparent 60%),
+              linear-gradient(180deg, var(--bg1), #f6fbff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.container {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid rgba(59,130,246,0.10);
+}
+
+h1, h2, h3 {
+  color: var(--primary-700);
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary-700);
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #c7ddff;
+  padding: 10px 14px;
+  font-size: 16px;
+  background: #f8fbff;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease, background .15s ease, transform .02s ease-in;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 4px rgba(147,197,253,.35);
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  color: white;
+  box-shadow: 0 10px 20px rgba(30,64,175,.25);
+  transition: transform .05s ease-in, filter .2s ease, box-shadow .2s ease;
+}
+
+button:hover { filter: brightness(1.05); }
+button:active { transform: translateY(1px) scale(.995); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tr:nth-child(even) { background: #f1f5f9; }
+
+a img, button img {
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr { display: block; }
+  tr { margin-bottom: 15px; }
+  td { border: none; padding: 8px 0; }
+  th { display: none; }
+}
