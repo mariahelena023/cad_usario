@@ -14,9 +14,9 @@ if(isset($_POST['cadastar'])){
     $res = $objUsuario->cadastrar();
 
     if($res){
-        echo '<script> alert("Cadastro com sucesso") </script>';
+        //echo '<script> alert("Cadastro com sucesso") </script>';
     }else{
-        echo '<script> alert("Falha no Cadastro") </script>';
+        //echo '<script> alert("Falha no Cadastro") </script>';
     }
 }
 
