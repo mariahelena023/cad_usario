@@ -10,5 +10,5 @@ senha VARCHAR(50) NOT NULL
 SELECT * FROM user;
 TRUNCATE TABLE user;
 
-INSERT INTO user(id, nome, senha) VALUES(default, 'Fulano', '123');
-INSERT INTO user(id, nome, senha) VALUES(default, 'Ciclano', '124');
+INSERT INTO user(id, nome, senha) VALUES(1, 'Fulano', '123');
+INSERT INTO user(id, nome, senha) VALUES(2, 'Ciclano', '124');

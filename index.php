@@ -31,7 +31,7 @@
             <input id="senha" type="password" name="senha" placeholder="Sua senha" required />
           </div>
           <div class="actions">
-            <button class="btn" type="submit">Entrar</button>
+            <button id="btn_login" class="btn" type="submit">Entrar</button>
           </div>
         </form>
         <p class="hint">Dica: use uma senha forte.</p>

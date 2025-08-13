@@ -8,29 +8,29 @@ if(isset($_POST['cadastar'])){
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
 
-    $objUsuario->nome = $nome;
-    $objUsuario->senha = $senha;
+    $objUsuario -> nome = $nome;
+    $objUsuario -> senha = $senha;
 
-    $res = $objUsuario->cadastrar();
+    $res = $objUsuario -> cadastrar();
 
     if($res){
-        echo '<script> alert("Cadastro com sucesso") </script>';
+        // echo '<script> alert("Cadastro com sucesso") </script>';
     }else{
-        echo '<script> alert("Falha no Cadastro") </script>';
+        // echo '<script> alert("Falha no Cadastro") </script>';
     }
 }
 
 $usuarios = [];
 
 if(isset($_POST['listar'])){
-    $usuarios = $objUsuario->listar_todos();
+    $usuarios = $objUsuario -> listar_todos();
 }
 
 if(isset($_GET['delete_id'])){
     $id_user = $_GET['delete_id'];
     echo "<script>console.log('ID User: " . $id_user . "' );</script>";
-    $objUsuario->deletar($id_user);
-    $usuarios = $objUsuario->listar_todos();
+    $objUsuario -> deletar($id_user);
+    $usuarios = $objUsuario -> listar_todos();
 }
 
 if(isset($_POST['editar'])){
@@ -38,9 +38,9 @@ if(isset($_POST['editar'])){
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
 
-    $objUsuario->id = $id;
-    $objUsuario->nome = $nome;
-    $objUsuario->senha = $senha;
+    $objUsuario -> id = $id;
+    $objUsuario -> nome = $nome;
+    $objUsuario -> senha = $senha;
 
     $res =  $objUsuario->atualizar();
     echo '<script> alert("'. ($res ? 'Editado com Sucesso' : 'Não foi Editado') .'") </script>';
@@ -80,14 +80,14 @@ if(isset($_POST['editar'])){
             Senha:            
             <input type="text" id="senha" name="senha">
             <br><br>
-            <button type="submit" name="cadastar" id="submitButton">Cadastar</button>
+            <button type="submit" name="cadastar" id="btn_cadastro">Cadastar</button>
             <br><br>
         </form>    
     </div>
 
     <div>
         <form method="POST">            
-            <button type="submit" name="listar" id="submitButton">Listar</button>
+            <button type="submit" name="listar" id="btn_listar">Listar</button>
         </form> 
 
         <?php if (!empty($usuarios)): ?>
