@@ -64,7 +64,7 @@ describe('template spec', () => {
     const usuarios = JSON.parse(user_json);
   
     cy.get('body')
-    
+
     usuarios.forEach((usuario, index) => {
       cy.get('#nome').type(usuario.nome)
       cy.wait(500)
